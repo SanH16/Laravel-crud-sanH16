@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controller\ProdiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get("/prodi/create", [ProdiController::class, "create"])->name("prodi.create");
+Route::post("/prodi/store", [ProdiController::class, "store"])->name("prodi.store");
