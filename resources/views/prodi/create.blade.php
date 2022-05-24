@@ -13,7 +13,7 @@
             <div class="col">
                 <h2>Form Prodi</h2>
                 @if (session()->has('info'))
-                <div class="alert alert-seccess">
+                <div class="alert alert-success">
                     {{ session()->get('info') }}
                 </div>
                 @endif

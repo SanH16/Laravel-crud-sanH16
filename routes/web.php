@@ -20,3 +20,6 @@ Route::get('/', function () {
 
 Route::get("/prodi/create", [ProdiController::class, "create"])->name("prodi.create");
 Route::post("/prodi/store", [ProdiController::class, "store"])->name("prodi.store");
+
+Route::get('/prodi', [ProdiController::class, 'index'])->name('prodi.index'); //Route menampilkan semua data program studi
+Route::get('/prodi/{id}', [ProdiController::class, 'show'])->name('prodi.show'); //Route menampilkan satu data (detail) program studi
