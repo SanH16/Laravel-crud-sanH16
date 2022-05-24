@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controller\ProdiController;
+use App\Http\Controllers\ProdiController;
 
 /*
 |--------------------------------------------------------------------------
