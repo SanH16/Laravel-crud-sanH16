@@ -22,4 +22,9 @@ Route::get("/prodi/create", [ProdiController::class, "create"])->name("prodi.cre
 Route::post("/prodi/store", [ProdiController::class, "store"])->name("prodi.store");
 
 Route::get('/prodi', [ProdiController::class, 'index'])->name('prodi.index'); //Route menampilkan semua data program studi
-Route::get('/prodi/{id}', [ProdiController::class, 'show'])->name('prodi.show'); //Route menampilkan satu data (detail) program studi
+Route::get('/prodi/{prodi}', [ProdiController::class, 'show'])->name('prodi.show'); //Route menampilkan satu data (detail) program studi
+
+Route::get('/prodi/{prodi}/edit', [ProdiController::class, 'edit'])->name('prodi.edit'); //Route untuk mengedit data
+Route::patch('/prodi/{prodi}', [ProdiController::class, 'update'])->name('prodi.update'); //Route untuk mengupdate data
+
+Route::delete('/prodi/{prodi}', [ProdiController::class, 'destroy'])->name('prodi.destroy'); //Route untuk menghapus data
