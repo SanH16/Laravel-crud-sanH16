@@ -19,6 +19,7 @@
                 <thead>
                     <tr>
                         <th>Nama Prodi</th>
+                        <th>Logo</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -26,6 +27,9 @@
                     @foreach ($prodis as $item)
                         <tr>
                             <td>{{ $item->nama}}</td>
+                            <td>
+                                <img src="{{ asset('storage/'.$item->foto) }}" alt="logo" width="100">
+                            </td>
                             <td>
                                 <form action="{{ route('prodi.destroy', ['prodi' => $item->id]) }}" 
                                 method="post">
