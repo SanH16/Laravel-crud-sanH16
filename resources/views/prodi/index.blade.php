@@ -1,10 +1,13 @@
-@extends('layout.master')
-@section("title", "Halaman List Prodi")
-
-@section("content")
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            Program Studi
+        </h2>
+    </x-slot>
     <div class="row pt-4">
         <div class="col">
             <h2>Prodi</h2>
+
             @if (session()->has('info'))
             <div class="alert alert-success">
                 {{ session()->get('info') }}
@@ -15,7 +18,7 @@
                 <a href="{{ route('prodi.create')}}" class="btn btn-primary">Tambah</a>
             </div>
 
-            <table class="table table-striped table-hover">
+            <table class="table-auto">
                 <thead>
                     <tr>
                         <th>Nama Prodi</th>
@@ -46,5 +49,4 @@
             </table>
         </div>
     </div>
-
-@endsection
+</x-app-layout>

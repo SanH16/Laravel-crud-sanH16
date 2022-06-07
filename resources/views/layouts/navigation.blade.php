@@ -16,6 +16,11 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-m sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('prodi.index')" :active="request()->routeIs('prodi.index')">
+                        Program Studi
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->
